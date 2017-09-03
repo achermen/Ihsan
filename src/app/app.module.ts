@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
  
 
 import { CommonModule } from '@angular/common';
@@ -28,25 +29,28 @@ import { BeneficiaireListComponent } from './Beneficiaire-list/Beneficiaire-list
 import { DataTableDemo1 } from './demo1/data-table-demo1';
 import { DataTableDemo2 } from './demo2/data-table-demo2';
 import { DataTableDemo3 } from './demo3/data-table-demo3';
+
 import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
-
-
+import { CoordonneeComponent } from './coordonnee/coordonnee.component';
+import { LogementComponent } from './logement/logement.component';
+import { SanteComponent } from './sante/sante.component';
+import { RessourceComponent } from './ressource/ressource.component';
 @NgModule({
   declarations: [
     AppComponent,
     BeneficiaireComponent,
     AidesComponent,
-    BeneficiaireListComponent
-    , DataTableDemo1Remote
-    , DataTableDemo1
-    , DataTableDemo2
-    , DataTableDemo3, CoordonneeComponent, LogementComponent, SanteComponent, RessourceComponent
-  ],
+    BeneficiaireListComponent,
+    DataTableDemo1Remote,
+    DataTableDemo1,
+    DataTableDemo2,
+    DataTableDemo3, CoordonneeComponent, LogementComponent, SanteComponent, RessourceComponent],
   imports: [
     DataTableModule,
     FormsModule,
     
     BrowserModule,
+    NgbModule,
     RouterModule.forRoot([
       {
         path: 'DataTable1',
@@ -71,8 +75,8 @@ import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
       {
         path: 'aides',
         component: AidesComponent
-
-      }])
+      }
+    ])
   ],
   providers: [BeneficiaireService, CoordonneService, LogementService, SanteService, RessourceService],
   bootstrap: [AppComponent]
