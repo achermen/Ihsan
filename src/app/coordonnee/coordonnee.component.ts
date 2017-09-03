@@ -16,4 +16,11 @@ export class CoordonneeComponent implements OnInit {
     this.coordonneeBeneficiaire = this.serviceCoordonnee.getCoordonneeBeneficaireByNumeroDossier(numeroDossier);
   }
 
+  addCoordoenneBeneficaire(formValue) {
+    //  this.beneficiaire = new BeneficiaireModel();
+    // this.beneficiaire.cin = formValue.cin;
+   // console.info"aaa");
+    console.info(formValue);
+  }
+
 }

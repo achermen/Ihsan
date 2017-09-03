@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+ 
+
 import { CommonModule } from '@angular/common';
 import { DataTableModule } from 'angular-4-data-table';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
 // Service.
-import { BeneficiaireService } from './beneficiaire.service'
+import { BeneficiaireService } from './beneficiaire.service';
 import { CoordonneService } from './coordonnee/coordonne.service';
 import { LogementService } from './logement/logement.service';
 import { SanteService } from './sante/sante.service';
@@ -43,6 +45,7 @@ import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
   imports: [
     DataTableModule,
     FormsModule,
+    
     BrowserModule,
     RouterModule.forRoot([
       {

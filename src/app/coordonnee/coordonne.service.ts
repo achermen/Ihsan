@@ -24,4 +24,8 @@ export class CoordonneService {
     };
     return this.coordonneeBeneficaire;
   }
+
+  // addCoordonneeBeneficiaire(){
+
+  // }
 }
