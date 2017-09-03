@@ -1,0 +1,26 @@
+  <form>  
+    <h3>Logement</h3> 
+    <label>Type logement:</label>  
+    <select name="typeLogement" id="typeLogement">
+        <option value="0">locataire</option>    
+        <option value="1">propriétaire</option>   
+    </select>  
+    <label>Montant:</label><input type="text" id="montantLogement" ngControl="montantLogement"/>
+    <br/><br/>
+    <label>Nombre chambres:</label><input type="text" id="nombreChambre" ngControl="nombreChambre"/>  
+    <br/><br/>
+    <label>Eclairage:</label> 
+    <select name="eclairage" id="eclairage">
+        <option value="0">oui</option>    
+        <option value="1">non</option>   
+    </select>
+    <label>Eau potable:</label>  
+    <select name="eauPotable" id="eauPotable">
+        <option value="0">oui</option>    
+        <option value="1">non</option>   
+    </select>  
+
+    <br/><br/>
+     <label>Autre besoin:</label>
+	<textarea rows="4" cols="50" id="autreBesoin"  ngControl="autreBesoin"></textarea>
+</form>

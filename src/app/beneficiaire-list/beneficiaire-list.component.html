@@ -1,0 +1,97 @@
+<div class= "main">
+<h1> Bénéficiaire list </h1>
+
+<p>Filtre</p>
+<form>
+	<label>CIN:</label>	<input   placeholder=" 00 00 00 00" />
+	<label>Nom:</label><input />
+	<label>Prénom:</label><input />
+	<br/><br/>
+	<label>Type d'aide:</label>	 
+	<select name="TypeAide">
+		<option value="yatim">Yatim</option>	
+		<option value="armala">Armala</option>	
+		<option value="fakir">Fakir</option>	
+		<option value="autres">Autres</option>	
+	</select>	 
+	<label>Ville:</label><input />
+	<label>Date de dernière aide:</label><input />
+
+    <br/>
+    <label>
+    <input type="radio" ng-model="color.name" value="aytam">
+    Aytam
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" ng-value="aramel">
+    Aramel
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" value="3azibet">
+    3azibet
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="color.name" value="AramelEtAzibat">
+    Aramel & Aytam
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="color.name" value="Motala9at">
+    Motala9at
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="color.name" value="Mousinouni">
+    Mousinouni
+  </label><br/>
+   <label>
+    <input type="radio" ng-model="color.name" value="Fa9ir">
+    Fa9ir
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" value="Autres">
+    Autres
+  </label><br/>
+
+	<button>Recherche</button>
+</form>
+<br/><br/><br/>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Ville</td>
+            <td>Nombre d'aides</td>
+            <td>Date dernière aide</td>
+            <td>Supprimer</td>
+        </tr>
+    </thead>
+    <tbody>
+<!--        <tr *ngFor="let beneficiaire of listBeneficiaire" [routerLink]="['/beneficiaire']" [queryParams]="{ id: beneficiaire.id }">-->
+        <tr *ngFor="let beneficiaire of listBeneficiaire;let ind = index" (click)="onSelectLigne(beneficiaire)">
+            <td>{{beneficiaire.id}}</td>
+            <td>{{beneficiaire.nom}}</td>
+            <td>{{beneficiaire.prenom}}</td>
+            <td>{{beneficiaire.ville}}</td>
+            <td>{{beneficiaire.nombreAide}}</td>
+            <td>{{beneficiaire.dateDerniereAide}}</td>
+            <td (click) = "removeBeneficiaire(ind)">x</td>
+        </tr>
+    </tbody>
+</table> 
+
+<!--
+<br/><br/><br/>
+<div class= "addItem">
+<input [(ngModel)] = "newBeneficiaire"  placeholder="Ajouter beneficiaire" class="addText"/>
+<button (click)= "pushBeneficiaire()">Add</button>
+</div>
+<ul>
+	<li *ngFor= "let beneficiaire of beneificiaireList; let ind = index">
+		{{beneficiaire}}
+		<span (click) = "removeBeneficiaire(ind)">x</span>
+	</li>
+</ul>
+
+</div>
+-->

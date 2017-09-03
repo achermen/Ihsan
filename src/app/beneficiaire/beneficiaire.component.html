@@ -1,0 +1,124 @@
+<p>
+  beneficiaire Achraf works!
+</p>
+ 
+<!--
+{{beneficiaireModel.id}}<br/>
+{{beneficiaireModel.prenom}}<br/>
+{{beneficiaireModel.nom}}<br/>
+{{beneficiaireModel.dateNaissance}}
+
+<ul>
+   <li *ngFor = "let ressource of ressourceModele">		{{ressource}}
+   </li>
+</ul>
+
+<p *ngIf = "isTrue else firstTemp">Hello Achraf It is true</p>
+<ng-template #firstTemp>Hello Achrat it is false </ng-template>
+
+
+
+<p *ngIf = "isTrue; then secondTemp else thirdTemp">Hello </p>
+<ng-template #secondTemp>Hello Achrat it is true second temp </ng-template>
+<ng-template #thirdTemp>Hello Achrat it is false third temp </ng-template>
+
+-->
+<app-coordonnee></app-coordonnee>
+<app-logement> </app-logement>
+<app-sante> </app-sante>
+<app-ressource> </app-ressource>    
+<!--
+<h3>Coordonnée</h3> 
+<form #formCreate="ngForm" (ngSubmit)="addBeneficaire(formCreate.value)">
+    <label>Numéro de dossier:</label> <input type="text" value={{beneficiaire.cin}} id="numeroDossier" ngControl="numeroDossier"/>
+    <label>Cin:</label><input type="text" id="cin" ngControl="cin"/>
+    <br/><br/>
+    <label>Nom:</label> <input type="text" id="nom" ngControl="nom"/>
+    <label>Prénom:</label><input type="text" id="prenom" ngControl="prenom"/>
+    <label>Etat civil:</label>
+    <select name="etatCivil">
+        <option value="0">Célibataire</option>    
+        <option value="1">Marié</option>
+        <option value="2">Divorsé</option>
+        <option value="3">orphelin</option>         
+    </select>  
+    <br/><br/>
+    <label>Adresse:</label><input type="text" id="adresse" ngControl="adresse"/>
+    <label>Ville:</label>  
+    <select name="ville">
+        <option value="0">Houmet souk</option>    
+        <option value="1">El Mey</option>  
+        <option value="2">Oualegh</option>  
+        <option value="3">Midoun</option>  
+        <option value="4">Guechaain</option>          
+        <option value="5">Ajim</option>   
+        <option value="6">Ghizen</option>       
+    </select>  
+    <label>Téléphone:</label><input type="text" id="telephone" ngControl="telephone"/>
+    <label>Nombre de famille:</label><input type="text" id="nombreFamille" ngControl="nombreFamille"/>
+    <br/><br/>
+    <h3>Logement</h3> 
+    <label>Type logement:</label>  
+    <select name="typeLogement">
+        <option value="0">locataire</option>    
+        <option value="1">propriétaire</option>   
+    </select>  
+    <label>Montant:</label><input type="text" id="montantLogement" ngControl="montantLogement"/>
+    <br/><br/>
+    <label>Nombre chambres:</label><input type="text" id="nombreChambre" ngControl="nombreChambre"/>  
+    <br/><br/>
+    <label>Eclairage:</label> 
+    <select name="eclairage">
+        <option value="0">oui</option>    
+        <option value="1">non</option>   
+    </select>
+    <label>Eau potable:</label>  
+    <select name="eauPotable">
+        <option value="0">oui</option>    
+        <option value="1">non</option>   
+    </select>  
+
+    <br/><br/>
+     <label>Autre besoin:</label>
+	<textarea rows="4" cols="50" id="autreBesoin"  ngControl="autreBesoin"></textarea>
+    <br/><br/>
+<h3>Santé</h3> 
+<label>avez vous un handicap:</label> 
+<select name="handicap">
+        <option value="0">physique</option>    
+        <option value="1">mental</option>            
+    </select>  
+<label>Description handicap:</label><input id="descriptionHandicap" ngControl="descriptionHandicap" />
+<br/><br/>
+<label>avez vous une maladie chronique:</label>
+<select name="handicap">
+        <option value="0">diabete</option>    
+        <option value="1">tension</option>
+        <option value="2">dialyse</option>                       
+    </select> 
+<label>Description une maladie chronique:</label><input id="descriptionMaladieChronique" ngControl="descriptionMaladieChronique" />
+<br/><br/>
+<h3>Ressources</h3> 
+<label>Type de ressources:</label>
+<select name="typeRessource">
+        <option value="0">salaire</option>    
+        <option value="1">salaire femme/ salaire Marie</option>  
+        <option value="2">en attente</option>  
+        <option value="3">aide association</option>   
+        <option value="4">louer</option>           
+ </select>  
+ <label>Montant:</label><input id="montantRessources" ngControl="montantRessources" />
+ <label>Description ressources:</label><input id="descriotionRessources" ngControl="descriotionRessources"/>
+
+<br/><br/>
+<br/><br/>
+<button type="submit">Enregistrer</button>
+</form>
+
+<h3> Data charged from Service</h3>
+<p>{{beneficiaire.id}}</p>
+<p>{{beneficiaire.cin}}</p>
+<p>{{beneficiaire.nom}}</p>
+<p>{{beneficiaire.prenom}}</p>
+<p>{{beneficiaire.ville}}</p> 
+-->
