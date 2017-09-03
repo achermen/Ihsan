@@ -9,12 +9,16 @@ export class LogementService {
   getLogementBeneficiaireByNumeroDossier(numeroDossier) {
     this.logementBeneficaire = {
       typeLogement: '1',
-      montant: 540,
+      montant: 640,
       nombreChambre: 5,
       eclairage: '0',
       eauPotable: '1',
       autreBesoin: 'pas de fenetres'
     };
     return this.logementBeneficaire;
+  }
+  addLogementBeneficaire(formValue) {
+    console.log(formValue);
+    return formValue;
   }
 }

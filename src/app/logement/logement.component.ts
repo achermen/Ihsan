@@ -16,5 +16,9 @@ export class LogementComponent implements OnInit {
     let numeroDossier = this.router.snapshot.params['numeroDossier'];
     this.logementBeneficiaire = this.serviceLogement.getLogementBeneficiaireByNumeroDossier(numeroDossier);
   }
-
+  
+  addLogementBeneficaire(formValue) {
+    console.log(formValue);
+    //this.serviceLogement.addLogementBeneficaire(formValue);
+  }
 }
