@@ -15,7 +15,6 @@ export class CoordonneeComponent implements OnInit {
   ngOnInit() {
     //let thisformCoordonne = {};
     let numeroDossier = this.router.snapshot.params['numeroDossier'];
-    //this.formCoordonne = this.serviceCoordonnee.getCoordonneeBeneficaireByNumeroDossier(numeroDossier);
     this.coordonneeBeneficiaire = this.serviceCoordonnee.getCoordonneeBeneficaireByNumeroDossier(numeroDossier);
   }
 
