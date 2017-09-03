@@ -10,7 +10,7 @@ export class CoordonneService {
   getCoordonneeBeneficaireByNumeroDossier(numeroDossier){
     this.coordonneeBeneficaire={
     numeroDossier : "1",
-    cin:  "04815383" ,
+    cin:  "04877355" ,
     nom:  "BAKIR",
     prenom:  "Achraf",
     telephone:  "06 32 35 29 16",
@@ -18,11 +18,10 @@ export class CoordonneService {
     niveauD_etude: "Master",
     profession:  "Ingenieur",
     nombreMembreFamille:  6,
-    ville :  "Oualegh",
+    ville :  "0",
     etatDossier :  "Actif",   
-    etatCivil : "Celibataire"  
+    etatCivil : "0"  
     }
     return this.coordonneeBeneficaire;
   }
-
 }

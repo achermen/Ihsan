@@ -6,10 +6,9 @@ export class RessourceService {
   ressourceBeneficaire: RessourceModel;
   getRessourceBeneficaireByNumeroDossier(numeroDossier){
   	this.ressourceBeneficaire={
-     typeRessource: "locataire",
-     montant: 530,
-     descriptionRessource: "salarie"};
+     typeRessource: "1",
+     montantRessource: 4000,
+     descriptionRessource: "salarie chez Klee group"};
   	 return this.ressourceBeneficaire;
   }
-
 }

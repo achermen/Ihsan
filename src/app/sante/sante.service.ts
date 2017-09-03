@@ -9,9 +9,9 @@ export class SanteService {
   	 
     this.santeBeneficaire={
   	aUnHandicap:"non",
-	  aUneMaladieChronique:"non",
-    descriptionHandicap : "oui",
-    descriptionMaladieChronique: "tension"   
+	  aUneMaladieChronique:"2",
+    descriptionHandicap : "pas d handicap Hmd",
+    descriptionMaladieChronique: " description test maladie"   
   	};
     return this.santeBeneficaire;
   }

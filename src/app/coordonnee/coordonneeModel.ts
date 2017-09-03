@@ -4,7 +4,7 @@ export class CoordonneeModel{
     cin: string;
     nom: string;
     prenom: string;
-    //dateDeNaissaice
+    //dateDeNaissaice: 
     telephone: string;
     adresse: string;
     niveauD_etude: string;
@@ -15,6 +15,7 @@ export class CoordonneeModel{
     ville : string;
     etatDossier : string;   
     etatCivil : string;
+
    
 
 constructor (numeroDossier: string, cin : string, nom : string, prenom:string , telephone:string, adresse: string

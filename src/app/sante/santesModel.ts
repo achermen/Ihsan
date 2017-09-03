@@ -1,7 +1,6 @@
 export class SantesModel{
 
-
-	/*
+ 
   aUnHandicap: string;
 	aUneMaladieChronique: string;
   descriptionHandicap : string;
@@ -12,12 +11,5 @@ export class SantesModel{
             this.aUneMaladieChronique= aUneMaladieChronique ;
             this.descriptionHandicap=  descriptionHandicap ;
             this.descriptionMaladieChronique= descriptionMaladieChronique ;                
-           }
-           */
-
-            /*test: string;
-             constructor (test: string){
-              this.test = test;
-             }*/
-
+           }        
 }

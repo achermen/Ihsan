@@ -1,13 +1,13 @@
 
 export class RessourceModel{
     typeRessource : string;
-    montant: number;
+    montantRessource: number;
     descriptionRessource: string;
    
    //console.log("aaa") ;
-constructor (typeRessource: string, montant : number, descriptionRessource : string ){    
+constructor (typeRessource: string, montantRessource : number, descriptionRessource : string ){    
             this.typeRessource =typeRessource  ;
-            this.montant= montant ;
+            this.montantRessource= montantRessource ;
             this.descriptionRessource=  descriptionRessource ;   
             //console.log("hello") ;
            }

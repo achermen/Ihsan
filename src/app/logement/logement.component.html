@@ -1,26 +1,27 @@
   <form>  
     <h3>Logement</h3> 
     <label>Type logement:</label>  
-    <select name="typeLogement" id="typeLogement">
+    <select name="typeLogement" value={{logementBeneficiaire.typeLogement}} id="typeLogement">
         <option value="0">locataire</option>    
         <option value="1">propriétaire</option>   
+        <option value="2">autre</option>   
     </select>  
-    <label>Montant:</label><input type="text" id="montantLogement" ngControl="montantLogement"/>
+    <label>Montant:</label><input type="text" id="montantLogement" value={{logementBeneficiaire.montant}} ngControl="montantLogement"/>
     <br/><br/>
-    <label>Nombre chambres:</label><input type="text" id="nombreChambre" ngControl="nombreChambre"/>  
+    <label>Nombre chambres:</label><input type="text" id="nombreChambre"   value={{logementBeneficiaire.nombreChambre}} nombreChambrengControl="nombreChambre"/>  
     <br/><br/>
     <label>Eclairage:</label> 
-    <select name="eclairage" id="eclairage">
+    <select name="eclairage" value={{logementBeneficiaire.eclairage}}  id="eclairage">
         <option value="0">oui</option>    
         <option value="1">non</option>   
     </select>
     <label>Eau potable:</label>  
-    <select name="eauPotable" id="eauPotable">
+    <select name="eauPotable" value={{logementBeneficiaire.eauPotable}}  id="eauPotable">
         <option value="0">oui</option>    
         <option value="1">non</option>   
     </select>  
 
     <br/><br/>
      <label>Autre besoin:</label>
-	<textarea rows="4" cols="50" id="autreBesoin"  ngControl="autreBesoin"></textarea>
+	<textarea rows="4" cols="50" id="autreBesoin"  value={{logementBeneficiaire.autreBesoin}} ngControl="autreBesoin"></textarea>
 </form>

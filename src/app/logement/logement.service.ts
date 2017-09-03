@@ -11,11 +11,12 @@ export class LogementService {
  
   getLogementBeneficiaireByNumeroDossier(numeroDossier){
    this.logementBeneficaire={
-   	  typeLogement: "test typeLogement",
-      montant: 4,
+   	  typeLogement: "1",
+      montant: 540,
       nombreChambre:5,
-      eclairage:"eclairage test",
-      eauPotable:"eauPotable test"}
+      eclairage:"0",
+      eauPotable:"1",
+      autreBesoin:"pas de fenetres"};
     return this. logementBeneficaire;
    }  
   }
