@@ -17,4 +17,8 @@ export class RessourceComponent implements OnInit {
     this.ressourceBeneficaire = this.serviceRessource.getRessourceBeneficaireByNumeroDossier(numeroDossier);
   }
 
+  addRessourceBeneficaire(formValue){
+    console.log(formValue);
+  }
+
 }

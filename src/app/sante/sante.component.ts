@@ -15,4 +15,8 @@ export class SanteComponent implements OnInit {
     let numeroDossier = this.router.snapshot.params['numeroDossier'];
     this.santeBeneficaire = this.serviceSante.getSanteBeneficaireByNumeroDossier(numeroDossier);
   }
+
+  addSanteBeneficaire(formValue) {
+    console.log(formValue);
+  }
 }

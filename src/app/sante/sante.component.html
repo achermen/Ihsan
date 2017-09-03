@@ -1,22 +1,23 @@
-<form>
+<form #formSante="ngForm" (ngSubmit)="addSanteBeneficaire(formSante.value)">
 	<h3>Santé</h3>
 	<label>avez vous un handicap:</label>
-	<select name="handicap" id="handicap" value="{{santeBeneficaire.aUnHandicap}}">
+	<select name="handicap" id="handicap" [(ngModel)]="santeBeneficaire.aUnHandicap">
 	        <option value="0"></option>    
 	        <option value="1">physique</option>    
 	        <option value="2">mental</option>            
 	    </select>
-	<label>Description handicap:</label><input id="descriptionHandicap" value={{santeBeneficaire.descriptionHandicap}} ngControl="descriptionHandicap"
+	<label>Description handicap:</label><input id="descriptionHandicap" [(ngModel)]="santeBeneficaire.descriptionHandicap" name="descriptionHandicap"
 	/>
 	<br/><br/>
 	<label>avez vous une maladie chronique:</label>
-	<select name="maladieChronique" id="maladieChronique" value={{santeBeneficaire.aUneMaladieChronique}}>
+	<select name="maladieChronique" id="maladieChronique" [(ngModel)]="santeBeneficaire.aUneMaladieChronique">
 	  		<option value="0"></option>    
 	        <option value="1">diabete</option>    
 	        <option value="2">tension</option>
 	        <option value="3">dialyse</option>                       
 	    </select>
-	<label>Description une maladie chronique:</label><input id="descriptionMaladieChronique" value={{santeBeneficaire.descriptionMaladieChronique}}
-	 ngControl="descriptionMaladieChronique" />
+	<label>Description une maladie chronique:</label><input id="descriptionMaladieChronique" [(ngModel)]="santeBeneficaire.descriptionMaladieChronique"
+	 name="descriptionMaladieChronique" />
 	<br/><br/>
+	<button type="submit">Enregistrer</button>
 </form>

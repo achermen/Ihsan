@@ -1,18 +1,20 @@
 <form #formLogement="ngForm" (ngSubmit)="addLogementBeneficaire(formLogement.value)">
     <h3>Logement</h3>
     <label>Type logement:</label>
-  
-     <select name="typeLogement"  id="typeLogement" [(ngModel)]="logementBeneficiaire.typeLogement" >
+
+    <select name="typeLogement" id="typeLogement" [(ngModel)]="logementBeneficiaire.typeLogement">
         <option value="0">locataire</option>    
         <option value="1">propriétaire</option>   
         <option value="2">autre</option>   
     </select>
-    <label>Montant:</label><input type="text" id="montantLogement"  name="montantLogement" [(ngModel)]="logementBeneficiaire.montant" />
+    <label>Montant:</label><input type="text" id="montantLogement" name="montantLogement" [(ngModel)]="logementBeneficiaire.montant"
+    />
     <br/><br/>
-    <label>Nombre chambres:</label><input type="text" id="nombreChambre" name="nombreChambre" [(ngModel)]="logementBeneficiaire.nombreChambre"  />
+    <label>Nombre chambres:</label><input type="text" id="nombreChambre" name="nombreChambre" [(ngModel)]="logementBeneficiaire.nombreChambre"
+    />
     <br/><br/>
     <label>Eclairage:</label>
-    <select name="eclairage"  id="eclairage" [(ngModel)]="logementBeneficiaire.eclairage" >
+    <select name="eclairage" id="eclairage" [(ngModel)]="logementBeneficiaire.eclairage">
         <option value="0">oui</option>    
         <option value="1">non</option>   
     </select>

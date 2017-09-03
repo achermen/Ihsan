@@ -1,7 +1,7 @@
-<form>
+<form #formRessource="ngForm" (ngSubmit)="addRessourceBeneficaire(formRessource.value)">
 	<h3>Ressources</h3>
 	<label>Type de ressources:</label>
-	<select name="typeRessource" id="typeRessource" value={{ressourceBeneficaire.typeRessource}}>
+	<select name="typeRessource" id="typeRessource" [(ngModel)]="ressourceBeneficaire.typeRessource">
 	        <option value="0"></option>   
 	        <option value="1">salaire</option>    
 	        <option value="2">salaire femme/ salaire Marie</option>  
@@ -9,11 +9,10 @@
 	        <option value="4">aide association</option>   
 	        <option value="5">louer</option>           
 	 </select>
-	<label>Montant:</label><input id="montantRessources" value={{ressourceBeneficaire.montantRessource}} ngControl="montantRessources"
-	/>
-	<label>Description ressources:</label><input id="descriotionRessources" value={{ressourceBeneficaire.descriptionRessource}}
-	 ngControl="descriotionRessources" />
+	<label>Montant:</label><input id="montantRessources" name="montantRessources" [(ngModel)]="ressourceBeneficaire.montantRessource" />
+	<label>Description ressources:</label><input id="descriotionRessources" name="descriotionRessources"  [(ngModel)]="ressourceBeneficaire.descriptionRessource" />
 
 	<br/><br/>
 	<br/><br/>
+	<button type="submit">Enregistrer</button>
 </form>
