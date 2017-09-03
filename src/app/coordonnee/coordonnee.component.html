@@ -1,23 +1,23 @@
 <p>
     coordonnee works!
 </p>
-<form #formCoordonnee="ngForm" (ngSubmit)="addCoordoenneBeneficaire(formCoordonnee.value)">
+<form #formCoordonnee="ngForm" (ngSubmit)="addCoordonneeBeneficaire(formCoordonnee.value)">
+     
     <h3>Coordonnée</h3>
     <label>Etat de dossier:</label>
-    <select name="etatDossier" value={{coordonneeBeneficiaire.etatDossier}}>
+    <select name="etatDossier" value={{coordonneeBeneficiaire.etatDossier}} id="etatDossier" ngModel >
         <option value="0">Accepté</option>
         <option value="1">En attente</option>               
         <option value="2">refusé</option>
         <option value="3">cloturé</option>    
     </select>
-    <label>Numéro de dossier:</label> <input type="text" value={{coordonneeBeneficiaire.numeroDossier}} id="numeroDossier"
-        ngControl="numeroDossier" />
-    <label>Cin:</label><input type="text" value={{coordonneeBeneficiaire.cin}} id="cin" ngControl="cin" />
+    <label>Numéro de dossier:</label> <input type="text" value={{coordonneeBeneficiaire.numeroDossier}} id="numeroDossier"  name="numeroDossier" ngModel/>
+    <label>Cin:</label><input type="text" value={{coordonneeBeneficiaire.cin}} id="cin" name="cin" ngModel />  
     <br/><br/>
-    <label>Nom:</label> <input type="text" id="nom" value={{coordonneeBeneficiaire.nom}} ngControl="nom" />
-    <label>Prénom:</label><input type="text" id="prenom" value={{coordonneeBeneficiaire.prenom}} ngControl="prenom" />
+    <label>Nom:</label> <input type="text"  value={{coordonneeBeneficiaire.nom}} id="nom" name="nom" ngModel />
+    <label>Prénom:</label><input type="text" value={{coordonneeBeneficiaire.prenom}} id="prenom" name="prenom" ngModel />
     <label>Etat civil:</label>
-    <select name="etatCivil" value={{coordonneeBeneficiaire.etatCivil}}>
+    <select value={{coordonneeBeneficiaire.etatCivil}} id="etatCivil" name="etatCivil" ngModel>
         <option value="0">Célibataire</option>    
         <option value="1">Marié</option>
         <option value="2">Divorsé</option>
@@ -25,9 +25,9 @@
         <option value="3">autre</option>       
     </select>
     <br/><br/>
-    <label>Adresse:</label><input type="text" id="adresse" ngControl="adresse" value={{coordonneeBeneficiaire.adresse}}/>
+    <label>Adresse:</label><input type="text" value={{coordonneeBeneficiaire.adresse}}  id="adresse"  name="adresse" ngModel/>
     <label>Ville:</label>
-    <select name="ville" value={{coordonneeBeneficiaire.ville}}>
+    <select value={{coordonneeBeneficiaire.ville}} id="ville" name="ville" ngModel>
         <option value="0">Houmet souk</option>    
         <option value="1">El Mey</option>  
         <option value="2">Oualegh</option>  
@@ -36,8 +36,8 @@
         <option value="5">Ajim</option>   
         <option value="6">Ghizen</option>       
     </select>
-    <label>Téléphone:</label><input type="text" id="telephone" ngControl="telephone" value={{coordonneeBeneficiaire.telephone}}/>
-    <label>Nombre de famille:</label><input type="text" id="nombreFamille" value={{coordonneeBeneficiaire.nombreMembreFamille}}
-        ngControl="nombreMembreFamille" />
+    <label>Téléphone:</label><input type="text" value={{coordonneeBeneficiaire.telephone}} id="telephone" name="telephone" ngModel/>
+    <label>Nombre de famille:</label><input type="text" value={{coordonneeBeneficiaire.nombreMembreFamille}}
+        id="nombreFamille" name="nombreFamille" ngModel />
         <button type="submit">Enregistrer</button>
     </form>
