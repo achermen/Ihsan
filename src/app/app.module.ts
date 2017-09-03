@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { DataTableModule } from 'angular-4-data-table';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 // Service.
 import { BeneficiaireService } from './beneficiaire.service';
@@ -29,12 +31,7 @@ import { BeneficiaireListComponent } from './Beneficiaire-list/Beneficiaire-list
 import { DataTableDemo1 } from './demo1/data-table-demo1';
 import { DataTableDemo2 } from './demo2/data-table-demo2';
 import { DataTableDemo3 } from './demo3/data-table-demo3';
-
 import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
-import { CoordonneeComponent } from './coordonnee/coordonnee.component';
-import { LogementComponent } from './logement/logement.component';
-import { SanteComponent } from './sante/sante.component';
-import { RessourceComponent } from './ressource/ressource.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +45,6 @@ import { RessourceComponent } from './ressource/ressource.component';
   imports: [
     DataTableModule,
     FormsModule,
-    
     BrowserModule,
     NgbModule,
     RouterModule.forRoot([
