@@ -1,5 +1,5 @@
-<form>  
-	<h3>Ressources</h3> 
+<form>
+	<h3>Ressources</h3>
 	<label>Type de ressources:</label>
 	<select name="typeRessource" id="typeRessource" value={{ressourceBeneficaire.typeRessource}}>
 	        <option value="0"></option>   
@@ -8,10 +8,12 @@
 	        <option value="3">en attente</option>  
 	        <option value="4">aide association</option>   
 	        <option value="5">louer</option>           
-	 </select>  
-	 <label>Montant:</label><input id="montantRessources" value={{ressourceBeneficaire.montantRessource}}  ngControl="montantRessources" />
-	 <label>Description ressources:</label><input id="descriotionRessources" value={{ressourceBeneficaire.descriptionRessource}}  ngControl="descriotionRessources"/>
+	 </select>
+	<label>Montant:</label><input id="montantRessources" value={{ressourceBeneficaire.montantRessource}} ngControl="montantRessources"
+	/>
+	<label>Description ressources:</label><input id="descriotionRessources" value={{ressourceBeneficaire.descriptionRessource}}
+	 ngControl="descriotionRessources" />
 
 	<br/><br/>
-	<br/><br/>	 
+	<br/><br/>
 </form>
