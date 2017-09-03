@@ -1,19 +1,22 @@
-
-<form >
-	<h3>Santé</h3> 
-	<label>avez vous un handicap:</label> 
-	<select name="handicap" id="handicap">
-	        <option value="0">physique</option>    
-	        <option value="1">mental</option>            
-	    </select>  
-	<label>Description handicap:</label><input id="descriptionHandicap" ngControl="descriptionHandicap" />
+<form>
+	<h3>Santé</h3>
+	<label>avez vous un handicap:</label>
+	<select name="handicap" id="handicap" value="{{santeBeneficaire.aUnHandicap}}">
+	        <option value="0"></option>    
+	        <option value="1">physique</option>    
+	        <option value="2">mental</option>            
+	    </select>
+	<label>Description handicap:</label><input id="descriptionHandicap" value={{santeBeneficaire.descriptionHandicap}} ngControl="descriptionHandicap"
+	/>
 	<br/><br/>
 	<label>avez vous une maladie chronique:</label>
-	<select name="maladieChronique" id="maladieChronique">
-	        <option value="0">diabete</option>    
-	        <option value="1">tension</option>
-	        <option value="2">dialyse</option>                       
-	    </select> 
-	<label>Description une maladie chronique:</label><input id="descriptionMaladieChronique" ngControl="descriptionMaladieChronique" />
+	<select name="maladieChronique" id="maladieChronique" value={{santeBeneficaire.aUneMaladieChronique}}>
+	  		<option value="0"></option>    
+	        <option value="1">diabete</option>    
+	        <option value="2">tension</option>
+	        <option value="3">dialyse</option>                       
+	    </select>
+	<label>Description une maladie chronique:</label><input id="descriptionMaladieChronique" value={{santeBeneficaire.descriptionMaladieChronique}}
+	 ngControl="descriptionMaladieChronique" />
 	<br/><br/>
 </form>
