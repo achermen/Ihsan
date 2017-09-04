@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {BeneficiaireModel} from './beneficiaireModel';
-import {BeneficiaireService} from './../beneficiaire.service'
-import {Router} from "@angular/router";
+import { BeneficiaireModel } from './beneficiaireModel';
+import { BeneficiaireService } from './../beneficiaire.service'
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -10,32 +10,31 @@ import {Router} from "@angular/router";
   styleUrls: ['./beneficiaire-list.component.css']
 })
 export class BeneficiaireListComponent implements OnInit {
-  listBeneficiaire : BeneficiaireModel[];
-  beneificiaireList =["Achraf", "Mehdi", "Hamdi"];
-  newBeneficiaire = "default value";
-  pushBeneficiaire = function(){
-  	if(this.newBeneficiaire != ""){
-  		this.beneificiaireList.push(this.newBeneficiaire);
-  		this.newBeneficiaire ="";
-  	}
+  listBeneficiaire: BeneficiaireModel[];
+  beneificiaireList = ['Achraf', 'Mehdi', 'Hamdi'];
+  newBeneficiaire = 'default value';
+  pushBeneficiaire = function () {
+    if (this.newBeneficiaire != '') {
+      this.beneificiaireList.push(this.newBeneficiaire);
+      this.newBeneficiaire = '';
+    }
+  };
+
+  onSelectLigne(benef) {
+    console.log(benef.id);
+    this.router.navigate(['/beneficiaire', benef.id]);
   }
 
-onSelectLigne(benef){
-  console.log(benef.id);
-  this.router.navigate(['/beneficiaire',benef.id]);
-}
-
-  removeBeneficiaire = function(index){
+  removeBeneficiaire = function (index) {
     console.log(index);
-   this.beneificiaireList.splice(index,1);
-  }
+    this.beneificiaireList.splice(index, 1);
+  };
 
-  constructor(private serviceBeneficiaire : BeneficiaireService
-    ,private router: Router
-    ) { }
+  constructor(private serviceBeneficiaire: BeneficiaireService
+    , private router: Router
+  ) { }
 
   ngOnInit() {
-   // this.listBeneficiaire = this.serviceBeneficiaire.getBeneficiaireList();
+    // this.listBeneficiaire = this.serviceBeneficiaire.getBeneficiaireList();
   }
-
 }
