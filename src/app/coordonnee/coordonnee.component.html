@@ -1,46 +1,65 @@
-<p>
-    coordonnee works!
-</p>
+
 <form #formCoordonnee="ngForm" (ngSubmit)="addCoordonneeBeneficaire(formCoordonnee.value)">
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Coordonnée</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div id="collapse1">
+            <h3>Coordonnée</h3>
+            <label>Etat de dossier:</label>
+            <select name="etatDossier" id="etatDossier" [(ngModel)]="coordonneeBeneficiaire.etatDossier">
+                                        <option value="0">Accepté</option>
+                                        <option value="1">En attente</option>               
+                                        <option value="2">refusé</option>
+                                        <option value="3">cloturé</option>    
+                                    </select>
+            <label>Numéro de dossier:</label> <input type="text" id="numeroDossier" name="numeroDossier" [(ngModel)]="coordonneeBeneficiaire.numeroDossier"
+            />
+            <label>Cin:</label><input type="text" id="cin" [(ngModel)]="coordonneeBeneficiaire.cin" name="cin" />
 
-    <h3>Coordonnée</h3>
-    <label>Etat de dossier:</label>
-    <select name="etatDossier" id="etatDossier" [(ngModel)]="coordonneeBeneficiaire.etatDossier">
-        <option value="0">Accepté</option>
-        <option value="1">En attente</option>               
-        <option value="2">refusé</option>
-        <option value="3">cloturé</option>    
-    </select>
-    <label>Numéro de dossier:</label> <input type="text" id="numeroDossier" name="numeroDossier" [(ngModel)]="coordonneeBeneficiaire.numeroDossier"
-    />
-    <label>Cin:</label><input type="text" id="cin" [(ngModel)]="coordonneeBeneficiaire.cin" name="cin" />
+            <br/><br/>
+            <label>Nom:</label> <input type="text" [(ngModel)]="coordonneeBeneficiaire.nom" id="nom" name="nom" />
+            <label>Prénom:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.prenom" id="prenom" name="prenom"
+            />
+            <label>Etat civil:</label>
+            <select [(ngModel)]="coordonneeBeneficiaire.etatCivil" id="etatCivil" name="etatCivil">
+                                        <option value="0">Célibataire</option>    
+                                        <option value="1">Marié</option>
+                                        <option value="2">Divorsé</option>
+                                        <option value="3">orphelin</option>   
+                                        <option value="3">autre</option>       
+                                    </select>
+            <br/><br/>
+            <label>Adresse:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.adresse" id="adresse" name="adresse"
+            />
+            <label>Ville:</label>
+            <select [(ngModel)]="coordonneeBeneficiaire.ville" id="ville" name="ville">
+                                        <option value="0">Houmet souk</option>    
+                                        <option value="1">El Mey</option>  
+                                        <option value="2">Oualegh</option>  
+                                        <option value="3">Midoun</option>  
+                                        <option value="4">Guechaain</option>          
+                                        <option value="5">Ajim</option>   
+                                        <option value="6">Ghizen</option>       
+                                    </select>
+            <label>Téléphone:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.telephone" id="telephone" name="telephone"
+            />
+            <label>Nombre de famille:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.nombreMembreFamille"
+              id="nombreFamille" name="nombreFamille" />
+          </div>
 
-    <br/><br/>
-    <label>Nom:</label> <input type="text"  [(ngModel)]="coordonneeBeneficiaire.nom" id="nom" name="nom"  />
-    <label>Prénom:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.prenom" id="prenom" name="prenom"  />
-    <label>Etat civil:</label>
-    <select [(ngModel)]="coordonneeBeneficiaire.etatCivil" id="etatCivil" name="etatCivil" >
-        <option value="0">Célibataire</option>    
-        <option value="1">Marié</option>
-        <option value="2">Divorsé</option>
-        <option value="3">orphelin</option>   
-        <option value="3">autre</option>       
-    </select>
-    <br/><br/>
-    <label>Adresse:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.adresse" id="adresse" name="adresse" />
-    <label>Ville:</label>
-    <select [(ngModel)]="coordonneeBeneficiaire.ville" id="ville" name="ville" >
-        <option value="0">Houmet souk</option>    
-        <option value="1">El Mey</option>  
-        <option value="2">Oualegh</option>  
-        <option value="3">Midoun</option>  
-        <option value="4">Guechaain</option>          
-        <option value="5">Ajim</option>   
-        <option value="6">Ghizen</option>       
-    </select>
-    <label>Téléphone:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.telephone" id="telephone" name="telephone"
-        />
-    <label>Nombre de famille:</label><input type="text" [(ngModel)]="coordonneeBeneficiaire.nombreMembreFamille"  id="nombreFamille"
-        name="nombreFamille"  />
-    <button type="submit">Enregistrer</button>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-success text-right" type="submit">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </form>

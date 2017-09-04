@@ -1,31 +1,48 @@
 <form #formLogement="ngForm" (ngSubmit)="addLogementBeneficaire(formLogement.value)">
-    <h3>Logement</h3>
-    <label>Type logement:</label>
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">Logement</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div id="collapse1">
+            <label>Type logement:</label>
 
-    <select name="typeLogement" id="typeLogement" [(ngModel)]="logementBeneficiaire.typeLogement">
-        <option value="0">locataire</option>    
-        <option value="1">propriétaire</option>   
-        <option value="2">autre</option>   
-    </select>
-    <label>Montant:</label><input type="text" id="montantLogement" name="montantLogement" [(ngModel)]="logementBeneficiaire.montant"
-    />
-    <br/><br/>
-    <label>Nombre chambres:</label><input type="text" id="nombreChambre" name="nombreChambre" [(ngModel)]="logementBeneficiaire.nombreChambre"
-    />
-    <br/><br/>
-    <label>Eclairage:</label>
-    <select name="eclairage" id="eclairage" [(ngModel)]="logementBeneficiaire.eclairage">
-        <option value="0">oui</option>    
-        <option value="1">non</option>   
-    </select>
-    <label>Eau potable:</label>
-    <select name="eauPotable" id="eauPotable" [(ngModel)]="logementBeneficiaire.eauPotable">
-        <option value="0">oui</option>    
-        <option value="1">non</option>   
-    </select>
+            <select name="typeLogement" id="typeLogement" [(ngModel)]="logementBeneficiaire.typeLogement">
+                                    <option value="0">locataire</option>    
+                                    <option value="1">propriétaire</option>   
+                                    <option value="2">autre</option>   
+                                </select>
+            <label>Montant:</label><input type="text" id="montantLogement" name="montantLogement" [(ngModel)]="logementBeneficiaire.montant"
+            />
+            <br/><br/>
+            <label>Nombre chambres:</label><input type="text" id="nombreChambre" name="nombreChambre" [(ngModel)]="logementBeneficiaire.nombreChambre"
+            />
+            <br/><br/>
+            <label>Eclairage:</label>
+            <select name="eclairage" id="eclairage" [(ngModel)]="logementBeneficiaire.eclairage">
+                                    <option value="0">oui</option>    
+                                    <option value="1">non</option>   
+                                </select>
+            <label>Eau potable:</label>
+            <select name="eauPotable" id="eauPotable" [(ngModel)]="logementBeneficiaire.eauPotable">
+                                    <option value="0">oui</option>    
+                                    <option value="1">non</option>   
+                                </select>
 
-    <br/><br/>
-    <label>Autre besoin:</label>
-    <textarea rows="4" cols="50" id="autreBesoin" name="autreBesoin" [(ngModel)]="logementBeneficiaire.autreBesoin"></textarea>
-    <button type="submit">Enregistrer</button>
+            <br/><br/>
+            <label>Autre besoin:</label>
+            <textarea rows="4" cols="50" id="autreBesoin" name="autreBesoin" [(ngModel)]="logementBeneficiaire.autreBesoin"></textarea>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-success text-right" type="submit">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </form>
