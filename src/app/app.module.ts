@@ -7,8 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DataTableModule } from 'angular-4-data-table';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, CanActivate } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthGuardService as AuthGuard } from './auth/auth-guard.service';
+import { AuthService } from './auth/auth.service';
 
 
 // Service.
@@ -23,6 +25,7 @@ import { CoordonneeComponent } from './coordonnee/coordonnee.component';
 import { LogementComponent } from './logement/logement.component';
 import { SanteComponent } from './sante/sante.component';
 import { RessourceComponent } from './ressource/ressource.component';
+import { NotFoundComponent } from './notfound/notfound.component';
 
 import { BeneficiaireComponent } from './beneficiaire/beneficiaire.component';
 import { AidesComponent } from './aides/aides.component';
@@ -41,7 +44,13 @@ import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
     DataTableDemo1Remote,
     DataTableDemo1,
     DataTableDemo2,
-    DataTableDemo3, CoordonneeComponent, LogementComponent, SanteComponent, RessourceComponent],
+    DataTableDemo3,
+    CoordonneeComponent,
+    LogementComponent,
+    SanteComponent,
+    RessourceComponent,
+    NotFoundComponent
+  ],
   imports: [
     DataTableModule,
     FormsModule,
@@ -50,31 +59,41 @@ import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
     RouterModule.forRoot([
       {
         path: 'DataTable1',
-        component: DataTableDemo1
+        component: DataTableDemo1,
+        canActivate: [AuthGuard],
       },
       {
         path: 'DataTable2',
-        component: DataTableDemo2
+        component: DataTableDemo2,
+        canActivate: [AuthGuard],
       },
       {
         path: 'DataTable3',
-        component: DataTableDemo3
+        component: DataTableDemo3,
+        canActivate: [AuthGuard],
       },
       {
         path: 'beneficiaireList',
-        component: BeneficiaireListComponent
+        component: BeneficiaireListComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'beneficiaire/:numeroDossier',
-        component: BeneficiaireComponent
+        component: BeneficiaireComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'aides',
-        component: AidesComponent
-      }
+        component: AidesComponent,
+        canActivate: [AuthGuard],
+      },
+      // {
+      //   path: '**',
+      //   redirectTo: '404',
+      // }
     ])
   ],
-  providers: [BeneficiaireService, CoordonneService, LogementService, SanteService, RessourceService],
+  providers: [BeneficiaireService, CoordonneService, LogementService, SanteService, RessourceService, AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
