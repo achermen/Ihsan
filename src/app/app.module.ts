@@ -26,6 +26,7 @@ import { LogementComponent } from './logement/logement.component';
 import { SanteComponent } from './sante/sante.component';
 import { RessourceComponent } from './ressource/ressource.component';
 import { NotFoundComponent } from './notfound/notfound.component';
+import { AuthComponent } from './auth/auth.component';
 
 import { BeneficiaireComponent } from './beneficiaire/beneficiaire.component';
 import { AidesComponent } from './aides/aides.component';
@@ -49,7 +50,8 @@ import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
     LogementComponent,
     SanteComponent,
     RessourceComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AuthComponent
   ],
   imports: [
     DataTableModule,
@@ -85,6 +87,11 @@ import { DataTableDemo1Remote } from './demo1/data-table-demo1-remote';
       {
         path: 'aides',
         component: AidesComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'login',
+        component: AuthComponent,
         canActivate: [AuthGuard],
       },
       // {
