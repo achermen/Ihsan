@@ -9,7 +9,7 @@
 <div id="nav">
   <!--<a routerLink="/DataTable1"> DataTable 1 </a>
           <a routerLink="/DataTable2"> DataTable 2 </a>-->
-  <div *ngIf="false; then thenBlock else elseBlock"></div>
+  <div *ngIf="true; then thenBlock else elseBlock"></div>
   <ng-template #thenBlock>
     <a routerLink="/DataTable3"> Bénéficiaire List </a>
     <a routerLink="/beneficiaireList"> Bénéficiaire List 2</a>

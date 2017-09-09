@@ -11,6 +11,6 @@ export class AuthService {
         // true or false
         // return this.jwtHelper.isTokenExpired(token);
         console.log('in auth');
-        return false;
+        return true;
     }
 }

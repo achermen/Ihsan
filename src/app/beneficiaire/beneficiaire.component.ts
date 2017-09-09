@@ -14,6 +14,10 @@ import { BeneficiaireModel } from './../beneficiaire-list/beneficiaireModel';
   styleUrls: ['./beneficiaire.component.css']
 })
 export class BeneficiaireComponent implements OnInit {
+  parentTitle: string = "This is a title";
+   getParentTitle(): string {
+    return "get " + "aaaaaa";
+}
 
   beneficiaireModel = {
     id: '1',
