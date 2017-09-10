@@ -9,7 +9,7 @@ import { BeneficiaireService } from './../beneficiaire.service';
     templateUrl: 'data-table-demo3.html',
     styleUrls: ['data-table-demo3.css']
 })
-export class DataTableDemo3 {
+export class BeneficiaireListComponent {
 
     // filmResource = new DataTableResource(beneficiaires);
     filmResource = new DataTableResource(this.serviceBeneficiaire.getBeneficiaireList());
