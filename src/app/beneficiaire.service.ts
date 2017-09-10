@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BeneficiaireModel } from './beneficiaire-list/beneficiaireModel';
+import { BeneficiaireModel } from './beneficiaire/beneficiaireModel';
 
 
 @Injectable()
