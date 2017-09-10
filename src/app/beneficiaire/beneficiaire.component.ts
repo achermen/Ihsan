@@ -5,7 +5,7 @@ import { CoordonneeComponent } from './../coordonnee/coordonnee.component';
 import { LogementComponent } from './../logement/logement.component';
 
 import { BeneficiaireService } from './../beneficiaire.service';
-import { BeneficiaireModel } from './../beneficiaire-list/beneficiaireModel';
+import { BeneficiaireModel } from './../beneficiaire/beneficiaireModel';
 
 
 @Component({
